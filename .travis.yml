@@ -1,7 +1,1 @@
 language: go
-
-go:
-  - 1.5
-
-script:
-  - go test -covermode=atomic ./...
