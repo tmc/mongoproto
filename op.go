@@ -28,6 +28,10 @@ func OpFromReader(r io.Reader) (Op, error) {
 		result = &OpGetMore{Header: m}
 	case OpCodeInsert:
 		result = &OpInsert{Header: m}
+	case OpCodeDelete:
+		result = &OpDelete{Header: m}
+	case OpCodeUpdate:
+		result = &OpUpdate{Header: m}
 	default:
 		result = &OpUnknown{Header: m}
 	}
